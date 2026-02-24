@@ -2,9 +2,9 @@ import ProgressBar from './ProgressBar'
 import RegionGroup from './RegionGroup'
 import { BOSSES, BOSS_REGIONS } from '../data/bosses'
 
-export default function BossChecklist({ checkFlag, showDlc = true }) {
+export default function BossChecklist({ checkFlag, showDlc = true, statusFilter = 'all', regionFilter = 'all' }) {
   // Filter bosses based on DLC toggle
-  const filteredBosses = showDlc ? BOSSES : BOSSES.filter(b => !b.dlc)
+  let filteredBosses = showDlc ? BOSSES : BOSSES.filter(b => !b.dlc)
 
   // Add completion status
   const bossesWithStatus = filteredBosses.map(boss => ({
@@ -12,14 +12,28 @@ export default function BossChecklist({ checkFlag, showDlc = true }) {
     completed: checkFlag(boss.id),
   }))
 
+  // Apply status filter
+  let displayBosses = bossesWithStatus
+  if (statusFilter === 'completed') {
+    displayBosses = bossesWithStatus.filter(b => b.completed)
+  } else if (statusFilter === 'remaining') {
+    displayBosses = bossesWithStatus.filter(b => !b.completed)
+  }
+
+  // Apply region filter
+  if (regionFilter !== 'all') {
+    displayBosses = displayBosses.filter(b => b.region === regionFilter)
+  }
+
   // Group by region, preserving BOSS_REGIONS order
   const grouped = BOSS_REGIONS
     .map(region => ({
       region,
-      items: bossesWithStatus.filter(b => b.region === region),
+      items: displayBosses.filter(b => b.region === region),
     }))
     .filter(g => g.items.length > 0)
 
+  // Overall stats (before display filters, so progress bar shows true completion)
   const completed = bossesWithStatus.filter(b => b.completed).length
   const total = bossesWithStatus.length
 
@@ -32,10 +46,15 @@ export default function BossChecklist({ checkFlag, showDlc = true }) {
             key={region}
             region={region}
             items={items}
-            defaultOpen={items.some(i => i.completed) && !items.every(i => i.completed)}
+            defaultOpen={regionFilter !== 'all'}
           />
         ))}
       </div>
+      {grouped.length === 0 && (
+        <p className="text-center text-text-muted py-8">
+          No bosses match the current filters.
+        </p>
+      )}
     </div>
   )
 }

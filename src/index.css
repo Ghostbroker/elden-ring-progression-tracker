@@ -3,11 +3,52 @@
 @theme {
   --font-heading: 'Cinzel', serif;
   --font-body: 'Inter', sans-serif;
-  --color-bg-primary: #1a1a2e;
+  --color-bg-primary: #0f0f1a;
   --color-bg-secondary: #16213e;
-  --color-bg-card: #1f2937;
+  --color-bg-card: #1a1f2e;
   --color-gold: #c8a84e;
   --color-gold-dim: #a08030;
   --color-text-primary: #e5e5e5;
   --color-text-muted: #9ca3af;
+}
+
+/* Atmospheric background with subtle depth */
+body {
+  background-color: #0f0f1a;
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(22, 33, 62, 0.6) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(30, 20, 40, 0.5) 0%, transparent 40%),
+    radial-gradient(ellipse at 50% 100%, rgba(20, 15, 10, 0.4) 0%, transparent 50%);
+  background-attachment: fixed;
+}
+
+/* Subtle vignette overlay on main content */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.4) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ensure content sits above the vignette */
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+/* Scrollbar styling for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f0f1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a3e;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a4e;
 }
