@@ -1,8 +1,11 @@
 import { describe, it, expect, beforeAll } from 'vitest'
 import { loadBstMap, checkEventFlag, findEventFlagsInSlot } from '../eventFlags'
 import { getSlotOffsets } from '../sl2Parser'
-import { readFileSync } from 'fs'
+import { readFileSync, existsSync } from 'fs'
 import { resolve } from 'path'
+
+const SAVE_PATH = resolve(__dirname, '../../../ER0000.sl2')
+const hasSaveFile = existsSync(SAVE_PATH)
 
 describe('Event Flags Reader', () => {
   let bstMap
@@ -93,12 +96,12 @@ describe('Event Flags Reader', () => {
     })
   })
 
-  describe('findEventFlagsInSlot (with real save file)', () => {
+  describe.skipIf(!hasSaveFile)('findEventFlagsInSlot (with real save file)', () => {
     let slotData
     let result
 
     beforeAll(() => {
-      const nodeBuf = readFileSync(resolve(__dirname, '../../../ER0000.sl2'))
+      const nodeBuf = readFileSync(SAVE_PATH)
       const buffer = nodeBuf.buffer.slice(
         nodeBuf.byteOffset,
         nodeBuf.byteOffset + nodeBuf.byteLength

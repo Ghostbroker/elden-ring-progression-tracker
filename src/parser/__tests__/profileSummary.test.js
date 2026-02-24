@@ -1,15 +1,18 @@
 import { describe, it, expect, beforeAll } from 'vitest'
 import { readProfileSummary } from '../profileSummary'
-import { readFileSync } from 'fs'
+import { readFileSync, existsSync } from 'fs'
 import { resolve } from 'path'
 
-describe('Profile Summary Reader', () => {
+const SAVE_PATH = resolve(__dirname, '../../../ER0000.sl2')
+const hasSaveFile = existsSync(SAVE_PATH)
+
+describe.skipIf(!hasSaveFile)('Profile Summary Reader', () => {
   let buffer
 
   beforeAll(() => {
     // Node.js Buffer may share a pooled ArrayBuffer with a non-zero byteOffset.
     // Copy into a clean ArrayBuffer so DataView offsets are correct.
-    const nodeBuf = readFileSync(resolve(__dirname, '../../../ER0000.sl2'))
+    const nodeBuf = readFileSync(SAVE_PATH)
     buffer = nodeBuf.buffer.slice(nodeBuf.byteOffset, nodeBuf.byteOffset + nodeBuf.byteLength)
   })
 
