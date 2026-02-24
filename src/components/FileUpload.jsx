@@ -2,8 +2,8 @@ import { useCallback } from 'react'
 
 export default function FileUpload({ onFileLoaded }) {
   const handleFile = useCallback((file) => {
-    if (!file.name.endsWith('.sl2')) {
-      alert('Please upload an Elden Ring save file (.sl2)')
+    if (!file.name.endsWith('.sl2') && !file.name.endsWith('.co2')) {
+      alert('Please upload an Elden Ring save file (.sl2 or .co2)')
       return
     }
     const reader = new FileReader()
@@ -45,14 +45,14 @@ export default function FileUpload({ onFileLoaded }) {
                    bg-bg-card/50 text-center max-w-lg w-full"
       >
         <p className="text-xl text-text-primary mb-2">
-          Drop your ER0000.sl2 file here
+          Drop your save file here
         </p>
         <p className="text-text-muted text-sm mb-4">
           or click to browse
         </p>
         <input
           type="file"
-          accept=".sl2"
+          accept=".sl2,.co2"
           onChange={(e) => e.target.files[0] && handleFile(e.target.files[0])}
           className="hidden"
           id="file-input"
@@ -65,7 +65,9 @@ export default function FileUpload({ onFileLoaded }) {
           Choose File
         </label>
         <p className="text-text-muted text-xs mt-6">
-          Save file location: C:\Users\[you]\AppData\Roaming\EldenRing\[SteamID]\ER0000.sl2
+          Vanilla: C:\Users\[you]\AppData\Roaming\EldenRing\[SteamID]\ER0000.sl2
+          <br />
+          Seamless Coop: Same folder, ER0000.co2
         </p>
       </div>
       <p className="text-text-muted text-xs mt-4">
