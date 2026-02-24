@@ -55,4 +55,4 @@ npm run build     # Production build
 
 ## License
 
-MIT
+[GPL v3](LICENSE)
