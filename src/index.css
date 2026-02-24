@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Inter', sans-serif;
+  --color-bg-primary: #1a1a2e;
+  --color-bg-secondary: #16213e;
+  --color-bg-card: #1f2937;
+  --color-gold: #c8a84e;
+  --color-gold-dim: #a08030;
+  --color-text-primary: #e5e5e5;
+  --color-text-muted: #9ca3af;
+}
