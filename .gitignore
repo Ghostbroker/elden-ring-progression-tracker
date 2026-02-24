@@ -1,0 +1,5 @@
+node_modules/
+dist/
+.env
+*.sl2
+.DS_Store
