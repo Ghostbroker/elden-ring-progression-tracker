@@ -18,7 +18,7 @@ export default function FilterSidebar({
 }) {
   return (
     <aside className="w-56 shrink-0">
-      <div className="sticky top-6 space-y-6">
+      <div className="md:sticky md:top-6 space-y-6">
         {/* DLC Toggle */}
         <div>
           <h3 className="text-xs font-semibold text-gold uppercase tracking-wider mb-2">Content</h3>

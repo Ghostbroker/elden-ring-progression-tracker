@@ -29,10 +29,10 @@ export default function FileUpload({ onFileLoaded }) {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen px-4">
-      <h1 className="text-5xl font-heading text-gold mb-4">
+      <h1 className="text-3xl sm:text-5xl font-heading text-gold mb-4 text-center">
         Elden Ring Progression Tracker
       </h1>
-      <p className="text-text-muted mb-8 text-center max-w-md">
+      <p className="text-text-muted mb-8 text-center max-w-md text-sm sm:text-base">
         Upload your save file to automatically track your progression across
         bosses, sites of grace, and collectibles.
       </p>
@@ -40,14 +40,14 @@ export default function FileUpload({ onFileLoaded }) {
         onDrop={handleDrop}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
-        className="border-2 border-dashed border-gold/40 rounded-lg p-16
+        className="border-2 border-dashed border-gold/40 rounded-lg p-8 sm:p-16
                    hover:border-gold/80 transition-colors cursor-pointer
                    bg-bg-card/50 text-center max-w-lg w-full"
       >
-        <p className="text-xl text-text-primary mb-2">
+        <p className="text-lg sm:text-xl text-text-primary mb-2">
           Drop your save file here
         </p>
-        <p className="text-text-muted text-sm mb-4">
+        <p className="text-text-muted text-xs sm:text-sm mb-4">
           or click to browse
         </p>
         <input
@@ -64,10 +64,13 @@ export default function FileUpload({ onFileLoaded }) {
         >
           Choose File
         </label>
-        <p className="text-text-muted text-xs mt-6">
+        <p className="text-text-muted text-xs mt-6 hidden sm:block">
           Vanilla: C:\Users\[you]\AppData\Roaming\EldenRing\[SteamID]\ER0000.sl2
           <br />
           Seamless Coop: Same folder, ER0000.co2
+        </p>
+        <p className="text-text-muted text-xs mt-6 sm:hidden">
+          Supports .sl2 and .co2 files
         </p>
       </div>
       <p className="text-text-muted text-xs mt-4">

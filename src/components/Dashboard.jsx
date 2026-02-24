@@ -22,6 +22,7 @@ export default function Dashboard({ profile, checkFlag, onBack, onNewFile }) {
   const [showDlc, setShowDlc] = useState(true)
   const [statusFilter, setStatusFilter] = useState('all')
   const [regionFilter, setRegionFilter] = useState('all')
+  const [showMobileFilters, setShowMobileFilters] = useState(false)
 
   // Reset filters when switching tabs
   const handleTabChange = (tab) => {
@@ -37,13 +38,13 @@ export default function Dashboard({ profile, checkFlag, onBack, onNewFile }) {
     <div className="min-h-screen">
       {/* Top bar */}
       <header className="bg-bg-card/80 backdrop-blur-sm border-b border-gold/20 px-4 py-3 sticky top-0 z-10">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
+        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
           <div>
-            <h1 className="text-xl font-heading text-gold">Elden Ring Progression Tracker</h1>
+            <h1 className="text-lg sm:text-xl font-heading text-gold">Elden Ring Progression Tracker</h1>
           </div>
           <div className="flex items-center gap-4">
             <div className="text-right">
-              <p className="text-text-primary font-heading">{profile.name}</p>
+              <p className="text-text-primary font-heading text-sm sm:text-base">{profile.name}</p>
               <p className="text-text-muted text-xs">Level {profile.level}</p>
             </div>
             <div className="flex gap-2">
@@ -66,17 +67,47 @@ export default function Dashboard({ profile, checkFlag, onBack, onNewFile }) {
         <TabNavigation activeTab={activeTab} onTabChange={handleTabChange} />
 
         <div className="flex gap-8">
-          {/* Sidebar */}
-          <FilterSidebar
-            showDlc={showDlc}
-            onShowDlcChange={setShowDlc}
-            statusFilter={statusFilter}
-            onStatusFilterChange={setStatusFilter}
-            regionFilter={regionFilter}
-            onRegionFilterChange={setRegionFilter}
-            regions={currentRegions}
-            showRegionFilter={showRegionFilter}
-          />
+          {/* Mobile filter button */}
+          <button
+            onClick={() => setShowMobileFilters(!showMobileFilters)}
+            className="md:hidden fixed bottom-4 right-4 z-20 bg-gold text-bg-primary
+                       px-4 py-2 rounded-full shadow-lg font-medium text-sm"
+          >
+            Filters
+          </button>
+
+          {/* Sidebar - hidden on mobile unless toggled */}
+          {showMobileFilters && (
+            <div
+              className="fixed inset-0 z-30 bg-black/50 md:hidden"
+              onClick={() => setShowMobileFilters(false)}
+            />
+          )}
+          <div className={`
+            ${showMobileFilters
+              ? 'fixed left-0 top-0 bottom-0 z-40 bg-bg-primary p-4 pt-16 overflow-y-auto w-64 shadow-xl'
+              : 'hidden md:block'}
+          `}>
+            {showMobileFilters && (
+              <button
+                onClick={() => setShowMobileFilters(false)}
+                className="absolute top-4 right-4 text-text-muted hover:text-text-primary text-xl"
+                aria-label="Close filters"
+              >
+                ✕
+              </button>
+            )}
+            <FilterSidebar
+              showDlc={showDlc}
+              onShowDlcChange={setShowDlc}
+              statusFilter={statusFilter}
+              onStatusFilterChange={setStatusFilter}
+              regionFilter={regionFilter}
+              onRegionFilterChange={setRegionFilter}
+              regions={currentRegions}
+              showRegionFilter={showRegionFilter}
+            />
+          </div>
 
           {/* Content */}
           <div className="flex-1 min-w-0">
