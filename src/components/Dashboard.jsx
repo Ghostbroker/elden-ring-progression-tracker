@@ -2,17 +2,20 @@ import { useState } from 'react'
 import TabNavigation from './TabNavigation'
 import BossChecklist from './BossChecklist'
 import GraceChecklist from './GraceChecklist'
+import CollectibleChecklist from './CollectibleChecklist'
 import FilterSidebar from './FilterSidebar'
 import { BOSS_REGIONS } from '../data/bosses'
 import { GRACE_REGIONS } from '../data/graces'
+import { COOKBOOKS, PAINTINGS, WHETBLADES, GESTURES, COLLECTIBLE_REGIONS } from '../data/collectibles'
 
 const TAB_REGIONS = {
   bosses: BOSS_REGIONS,
   graces: GRACE_REGIONS,
+  cookbooks: COLLECTIBLE_REGIONS,
 }
 
 // Tabs that support region filtering
-const REGION_TABS = new Set(['bosses', 'graces'])
+const REGION_TABS = new Set(['bosses', 'graces', 'cookbooks'])
 
 export default function Dashboard({ profile, checkFlag, onBack, onNewFile }) {
   const [activeTab, setActiveTab] = useState('bosses')
@@ -95,11 +98,54 @@ export default function Dashboard({ profile, checkFlag, onBack, onNewFile }) {
               />
             )}
 
-            {activeTab !== 'bosses' && activeTab !== 'graces' && (
-              <div className="text-center py-16 text-text-muted">
-                <p className="text-lg">Coming soon</p>
-                <p className="text-sm mt-1">This checklist will be added in a future update.</p>
-              </div>
+            {activeTab === 'cookbooks' && (
+              <CollectibleChecklist
+                items={COOKBOOKS}
+                regions={COLLECTIBLE_REGIONS}
+                checkFlag={checkFlag}
+                label="Cookbook Completion"
+                showDlc={showDlc}
+                statusFilter={statusFilter}
+                regionFilter={regionFilter}
+              />
+            )}
+
+            {activeTab === 'paintings' && (
+              <CollectibleChecklist
+                items={PAINTINGS}
+                regions={COLLECTIBLE_REGIONS}
+                checkFlag={checkFlag}
+                label="Painting Completion"
+                showDlc={showDlc}
+                statusFilter={statusFilter}
+                regionFilter={regionFilter}
+              />
+            )}
+
+            {activeTab === 'whetblades' && (
+              <CollectibleChecklist
+                items={WHETBLADES}
+                regions={null}
+                checkFlag={checkFlag}
+                label="Whetblade Completion"
+                showDlc={showDlc}
+                statusFilter={statusFilter}
+                regionFilter={regionFilter}
+                useRegionGrouping={false}
+              />
+            )}
+
+            {activeTab === 'gestures' && (
+              <CollectibleChecklist
+                items={GESTURES}
+                regions={null}
+                checkFlag={checkFlag}
+                label="Gesture Completion"
+                showDlc={showDlc}
+                statusFilter={statusFilter}
+                regionFilter={regionFilter}
+                useRegionGrouping={false}
+              />
             )}
           </div>
         </div>
