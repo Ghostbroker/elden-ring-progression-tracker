@@ -14,6 +14,7 @@ export default function FilterSidebar({
   regionFilter,
   onRegionFilterChange,
   regions = BOSS_REGIONS,
+  showRegionFilter = true,
 }) {
   return (
     <aside className="w-56 shrink-0">
@@ -52,7 +53,7 @@ export default function FilterSidebar({
         </div>
 
         {/* Region Filter */}
-        <div>
+        {showRegionFilter && <div>
           <h3 className="text-xs font-semibold text-gold uppercase tracking-wider mb-2">Region</h3>
           <div className="space-y-1 max-h-80 overflow-y-auto pr-1">
             <label className="flex items-center gap-2 text-sm text-text-muted cursor-pointer hover:text-text-primary transition-colors">
@@ -78,7 +79,7 @@ export default function FilterSidebar({
               </label>
             ))}
           </div>
-        </div>
+        </div>}
       </div>
     </aside>
   )

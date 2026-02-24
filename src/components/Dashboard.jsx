@@ -1,7 +1,18 @@
 import { useState } from 'react'
 import TabNavigation from './TabNavigation'
 import BossChecklist from './BossChecklist'
+import GraceChecklist from './GraceChecklist'
 import FilterSidebar from './FilterSidebar'
+import { BOSS_REGIONS } from '../data/bosses'
+import { GRACE_REGIONS } from '../data/graces'
+
+const TAB_REGIONS = {
+  bosses: BOSS_REGIONS,
+  graces: GRACE_REGIONS,
+}
+
+// Tabs that support region filtering
+const REGION_TABS = new Set(['bosses', 'graces'])
 
 export default function Dashboard({ profile, checkFlag, onBack, onNewFile }) {
   const [activeTab, setActiveTab] = useState('bosses')
@@ -15,6 +26,9 @@ export default function Dashboard({ profile, checkFlag, onBack, onNewFile }) {
     setStatusFilter('all')
     setRegionFilter('all')
   }
+
+  const currentRegions = TAB_REGIONS[activeTab] || []
+  const showRegionFilter = REGION_TABS.has(activeTab)
 
   return (
     <div className="min-h-screen">
@@ -57,6 +71,8 @@ export default function Dashboard({ profile, checkFlag, onBack, onNewFile }) {
             onStatusFilterChange={setStatusFilter}
             regionFilter={regionFilter}
             onRegionFilterChange={setRegionFilter}
+            regions={currentRegions}
+            showRegionFilter={showRegionFilter}
           />
 
           {/* Content */}
@@ -70,7 +86,16 @@ export default function Dashboard({ profile, checkFlag, onBack, onNewFile }) {
               />
             )}
 
-            {activeTab !== 'bosses' && (
+            {activeTab === 'graces' && (
+              <GraceChecklist
+                checkFlag={checkFlag}
+                showDlc={showDlc}
+                statusFilter={statusFilter}
+                regionFilter={regionFilter}
+              />
+            )}
+
+            {activeTab !== 'bosses' && activeTab !== 'graces' && (
               <div className="text-center py-16 text-text-muted">
                 <p className="text-lg">Coming soon</p>
                 <p className="text-sm mt-1">This checklist will be added in a future update.</p>
