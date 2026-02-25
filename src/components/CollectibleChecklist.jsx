@@ -9,9 +9,16 @@ export default function CollectibleChecklist({
   showDlc = true,
   statusFilter = 'all',
   regionFilter = 'all',
+  searchQuery = '',
   useRegionGrouping = true,
 }) {
   let filteredItems = showDlc ? items : items.filter(i => !i.dlc)
+
+  // Apply search filter
+  if (searchQuery) {
+    const query = searchQuery.toLowerCase()
+    filteredItems = filteredItems.filter(i => i.name.toLowerCase().includes(query))
+  }
 
   const itemsWithStatus = filteredItems.map(item => ({
     ...item,

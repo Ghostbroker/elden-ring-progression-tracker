@@ -7,6 +7,8 @@ const STATUS_OPTIONS = [
 ]
 
 export default function FilterSidebar({
+  searchQuery = '',
+  onSearchChange,
   showDlc,
   onShowDlcChange,
   statusFilter,
@@ -19,6 +21,20 @@ export default function FilterSidebar({
   return (
     <aside className="w-56 shrink-0">
       <div className="md:sticky md:top-6 space-y-6">
+        {/* Search */}
+        <div>
+          <h3 className="text-xs font-semibold text-gold uppercase tracking-wider mb-2">Search</h3>
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => onSearchChange(e.target.value)}
+            placeholder="Search items..."
+            className="w-full px-3 py-1.5 text-sm bg-bg-primary border border-gold/30 rounded
+                       text-text-primary placeholder:text-text-muted/50
+                       focus:outline-none focus:border-gold/60 transition-colors"
+          />
+        </div>
+
         {/* DLC Toggle */}
         <div>
           <h3 className="text-xs font-semibold text-gold uppercase tracking-wider mb-2">Content</h3>

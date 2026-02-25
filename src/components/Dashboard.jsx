@@ -42,6 +42,7 @@ export default function Dashboard({ profile, checkFlag, checkInventory, onBack, 
   const [showDlc, setShowDlc] = useState(true)
   const [statusFilter, setStatusFilter] = useState('all')
   const [regionFilter, setRegionFilter] = useState('all')
+  const [searchQuery, setSearchQuery] = useState('')
   const [showMobileFilters, setShowMobileFilters] = useState(false)
 
   // Pre-map inventory items to include `region` from `category` (memoized)
@@ -57,6 +58,7 @@ export default function Dashboard({ profile, checkFlag, checkInventory, onBack, 
     setActiveTab(tab)
     setStatusFilter('all')
     setRegionFilter('all')
+    setSearchQuery('')
   }
 
   const currentRegions = TAB_REGIONS[activeTab] || []
@@ -126,6 +128,8 @@ export default function Dashboard({ profile, checkFlag, checkInventory, onBack, 
               </button>
             )}
             <FilterSidebar
+              searchQuery={searchQuery}
+              onSearchChange={setSearchQuery}
               showDlc={showDlc}
               onShowDlcChange={setShowDlc}
               statusFilter={statusFilter}
@@ -145,6 +149,7 @@ export default function Dashboard({ profile, checkFlag, checkInventory, onBack, 
                 showDlc={showDlc}
                 statusFilter={statusFilter}
                 regionFilter={regionFilter}
+                searchQuery={searchQuery}
               />
             )}
 
@@ -154,6 +159,7 @@ export default function Dashboard({ profile, checkFlag, checkInventory, onBack, 
                 showDlc={showDlc}
                 statusFilter={statusFilter}
                 regionFilter={regionFilter}
+                searchQuery={searchQuery}
               />
             )}
 
@@ -166,6 +172,7 @@ export default function Dashboard({ profile, checkFlag, checkInventory, onBack, 
                 showDlc={showDlc}
                 statusFilter={statusFilter}
                 regionFilter={regionFilter}
+                searchQuery={searchQuery}
               />
             )}
 
@@ -178,6 +185,7 @@ export default function Dashboard({ profile, checkFlag, checkInventory, onBack, 
                 showDlc={showDlc}
                 statusFilter={statusFilter}
                 regionFilter={regionFilter}
+                searchQuery={searchQuery}
               />
             )}
 
@@ -190,6 +198,7 @@ export default function Dashboard({ profile, checkFlag, checkInventory, onBack, 
                 showDlc={showDlc}
                 statusFilter={statusFilter}
                 regionFilter={regionFilter}
+                searchQuery={searchQuery}
               />
             )}
 
@@ -202,6 +211,7 @@ export default function Dashboard({ profile, checkFlag, checkInventory, onBack, 
                 showDlc={showDlc}
                 statusFilter={statusFilter}
                 regionFilter={regionFilter}
+                searchQuery={searchQuery}
               />
             )}
 
@@ -214,6 +224,7 @@ export default function Dashboard({ profile, checkFlag, checkInventory, onBack, 
                 showDlc={showDlc}
                 statusFilter={statusFilter}
                 regionFilter={regionFilter}
+                searchQuery={searchQuery}
                 useRegionGrouping={false}
               />
             )}
@@ -227,6 +238,7 @@ export default function Dashboard({ profile, checkFlag, checkInventory, onBack, 
                 showDlc={showDlc}
                 statusFilter={statusFilter}
                 regionFilter={regionFilter}
+                searchQuery={searchQuery}
               />
             )}
 
@@ -239,6 +251,7 @@ export default function Dashboard({ profile, checkFlag, checkInventory, onBack, 
                 showDlc={showDlc}
                 statusFilter={statusFilter}
                 regionFilter={regionFilter}
+                searchQuery={searchQuery}
               />
             )}
 
@@ -251,6 +264,7 @@ export default function Dashboard({ profile, checkFlag, checkInventory, onBack, 
                 showDlc={showDlc}
                 statusFilter={statusFilter}
                 regionFilter={regionFilter}
+                searchQuery={searchQuery}
               />
             )}
 
@@ -263,6 +277,7 @@ export default function Dashboard({ profile, checkFlag, checkInventory, onBack, 
                 showDlc={showDlc}
                 statusFilter={statusFilter}
                 regionFilter={regionFilter}
+                searchQuery={searchQuery}
                 useRegionGrouping={false}
               />
             )}
@@ -276,6 +291,7 @@ export default function Dashboard({ profile, checkFlag, checkInventory, onBack, 
                 showDlc={showDlc}
                 statusFilter={statusFilter}
                 regionFilter={regionFilter}
+                searchQuery={searchQuery}
                 useRegionGrouping={false}
               />
             )}

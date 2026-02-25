@@ -2,8 +2,14 @@ import ProgressBar from './ProgressBar'
 import RegionGroup from './RegionGroup'
 import { GRACES, GRACE_REGIONS } from '../data/graces'
 
-export default function GraceChecklist({ checkFlag, showDlc = true, statusFilter = 'all', regionFilter = 'all' }) {
+export default function GraceChecklist({ checkFlag, showDlc = true, statusFilter = 'all', regionFilter = 'all', searchQuery = '' }) {
   let filteredGraces = showDlc ? GRACES : GRACES.filter(g => !g.dlc)
+
+  // Apply search filter
+  if (searchQuery) {
+    const query = searchQuery.toLowerCase()
+    filteredGraces = filteredGraces.filter(g => g.name.toLowerCase().includes(query))
+  }
 
   const gracesWithStatus = filteredGraces.map(grace => ({
     ...grace,

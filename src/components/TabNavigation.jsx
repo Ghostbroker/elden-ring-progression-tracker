@@ -15,7 +15,7 @@ const TABS = [
 
 export default function TabNavigation({ activeTab, onTabChange }) {
   return (
-    <div className="flex gap-1 overflow-x-auto pb-2 mb-6 border-b border-gold/20">
+    <div className="flex flex-wrap gap-1 pb-2 mb-6 border-b border-gold/20">
       {TABS.map(tab => (
         <button
           key={tab.id}

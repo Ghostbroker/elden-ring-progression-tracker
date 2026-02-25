@@ -2,9 +2,15 @@ import ProgressBar from './ProgressBar'
 import RegionGroup from './RegionGroup'
 import { BOSSES, BOSS_REGIONS } from '../data/bosses'
 
-export default function BossChecklist({ checkFlag, showDlc = true, statusFilter = 'all', regionFilter = 'all' }) {
+export default function BossChecklist({ checkFlag, showDlc = true, statusFilter = 'all', regionFilter = 'all', searchQuery = '' }) {
   // Filter bosses based on DLC toggle
   let filteredBosses = showDlc ? BOSSES : BOSSES.filter(b => !b.dlc)
+
+  // Apply search filter
+  if (searchQuery) {
+    const query = searchQuery.toLowerCase()
+    filteredBosses = filteredBosses.filter(b => b.name.toLowerCase().includes(query))
+  }
 
   // Add completion status
   const bossesWithStatus = filteredBosses.map(boss => ({
