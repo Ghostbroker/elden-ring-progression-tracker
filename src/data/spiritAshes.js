@@ -1,0 +1,103 @@
+// Complete Elden Ring spirit ashes data — base game + Shadow of the Erdtree DLC
+// IDs are EquipParamGoods row IDs (decimal param IDs, base items only — no upgrades)
+// Sources: CyberGiant7/Elden-Ring-Automatic-Checklist, EldenRingDatabase/erdb, Fextralife wiki
+//
+// Base game spirit ashes occupy goods param IDs 200000–263000 (64 entries, step 1000).
+// DLC spirit ashes occupy goods param IDs 2200000–2220000 (20 entries, step 1000).
+// In save files, these IDs are stored with a 0x40000000 "goods" type prefix.
+
+export const SPIRIT_ASH_CATEGORIES = ['Spirit Ash']
+
+export const SPIRIT_ASHES = [
+  // =========================================================================
+  // BASE GAME SPIRIT ASHES (64)
+  // =========================================================================
+  { id: 200000, name: 'Black Knife Tiche', category: 'Spirit Ash', dlc: false },
+  { id: 201000, name: 'Banished Knight Oleg Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 202000, name: 'Banished Knight Engvall Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 203000, name: 'Fanged Imp Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 204000, name: 'Latenna the Albinauric', category: 'Spirit Ash', dlc: false },
+  { id: 205000, name: 'Nomad Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 206000, name: 'Nightmaiden & Swordstress Puppets', category: 'Spirit Ash', dlc: false },
+  { id: 207000, name: 'Mimic Tear Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 208000, name: 'Crystalian Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 209000, name: 'Ancestral Follower Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 210000, name: 'Winged Misbegotten Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 211000, name: 'Albinauric Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 212000, name: 'Skeletal Militiaman Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 213000, name: 'Skeletal Bandit Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 214000, name: 'Oracle Envoy Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 215000, name: 'Putrid Corpse Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 216000, name: 'Depraved Perfumer Carmaan Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 217000, name: 'Perfumer Tricia', category: 'Spirit Ash', dlc: false },
+  { id: 218000, name: 'Glintstone Sorcerer Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 219000, name: 'Twinsage Sorcerer Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 220000, name: 'Page Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 221000, name: 'Battlemage Hugues', category: 'Spirit Ash', dlc: false },
+  { id: 222000, name: 'Clayman Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 223000, name: 'Cleanrot Knight Finlay Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 224000, name: 'Kindred of Rot Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 225000, name: 'Marionette Soldier Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 226000, name: 'Avionette Soldier Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 227000, name: 'Fire Monk Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 228000, name: 'Blackflame Monk Amon Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 229000, name: 'Man-Serpent Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 230000, name: 'Azula Beastman Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 231000, name: 'Kaiden Sellsword Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 232000, name: 'Lone Wolf Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 233000, name: 'Giant Rat Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 234000, name: 'Demi-Human Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 235000, name: 'Rotten Stray Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 236000, name: 'Spirit Jellyfish Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 237000, name: 'Warhawk Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 238000, name: 'Stormhawk Deenh', category: 'Spirit Ash', dlc: false },
+  { id: 239000, name: 'Bloodhound Knight Floh', category: 'Spirit Ash', dlc: false },
+  { id: 240000, name: 'Wandering Noble Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 241000, name: 'Noble Sorcerer Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 242000, name: 'Vulgar Militia Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 243000, name: 'Mad Pumpkin Head Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 244000, name: 'Land Squirt Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 245000, name: 'Miranda Sprout Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 246000, name: 'Soldjars of Fortune Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 247000, name: 'Omenkiller Rollo', category: 'Spirit Ash', dlc: false },
+  { id: 248000, name: 'Greatshield Soldier Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 249000, name: 'Archer Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 250000, name: 'Godrick Soldier Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 251000, name: 'Raya Lucaria Soldier Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 252000, name: 'Leyndell Soldier Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 253000, name: 'Radahn Soldier Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 254000, name: 'Mausoleum Soldier Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 255000, name: 'Haligtree Soldier Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 256000, name: 'Ancient Dragon Knight Kristoff Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 257000, name: 'Redmane Knight Ogha Ashes', category: 'Spirit Ash', dlc: false },
+  { id: 258000, name: 'Lhutel the Headless', category: 'Spirit Ash', dlc: false },
+  { id: 259000, name: 'Nepheli Loux Puppet', category: 'Spirit Ash', dlc: false },
+  { id: 260000, name: 'Dung Eater Puppet', category: 'Spirit Ash', dlc: false },
+  { id: 261000, name: 'Finger Maiden Therolina Puppet', category: 'Spirit Ash', dlc: false },
+  { id: 262000, name: 'Dolores the Sleeping Arrow Puppet', category: 'Spirit Ash', dlc: false },
+  { id: 263000, name: 'Jarwight Puppet', category: 'Spirit Ash', dlc: false },
+
+  // =========================================================================
+  // DLC SPIRIT ASHES — Shadow of the Erdtree (20)
+  // =========================================================================
+  { id: 2200000, name: 'Curseblade Meera', category: 'Spirit Ash', dlc: true },
+  { id: 2201000, name: 'Bloodfiend Hexer\'s Ashes', category: 'Spirit Ash', dlc: true },
+  { id: 2202000, name: 'Gravebird Ashes', category: 'Spirit Ash', dlc: true },
+  { id: 2203000, name: 'Fire Knight Hilde', category: 'Spirit Ash', dlc: true },
+  { id: 2204000, name: 'Spider Scorpion Ashes', category: 'Spirit Ash', dlc: true },
+  { id: 2205000, name: 'Inquisitor Ashes', category: 'Spirit Ash', dlc: true },
+  { id: 2206000, name: 'Demi-Human Swordsman Yosh', category: 'Spirit Ash', dlc: true },
+  { id: 2207000, name: 'Messmer Soldier Ashes', category: 'Spirit Ash', dlc: true },
+  { id: 2208000, name: 'Black Knight Commander Andreas', category: 'Spirit Ash', dlc: true },
+  { id: 2209000, name: 'Black Knight Captain Huw', category: 'Spirit Ash', dlc: true },
+  { id: 2210000, name: 'Bigmouth Imp Ashes', category: 'Spirit Ash', dlc: true },
+  { id: 2211000, name: 'Man-Fly Ashes', category: 'Spirit Ash', dlc: true },
+  { id: 2212000, name: 'Taylew the Golem Smith', category: 'Spirit Ash', dlc: true },
+  { id: 2213000, name: 'Divine Bird Warrior Ornis', category: 'Spirit Ash', dlc: true },
+  { id: 2214000, name: 'Horned Warrior Ashes', category: 'Spirit Ash', dlc: true },
+  { id: 2215000, name: 'Ancient Dragon Florissax', category: 'Spirit Ash', dlc: true },
+  { id: 2217000, name: 'Fingercreeper Ashes', category: 'Spirit Ash', dlc: true },
+  { id: 2218000, name: 'Fire Knight Queelign', category: 'Spirit Ash', dlc: true },
+  { id: 2219000, name: 'Swordhand of Night Jol\u00e1n', category: 'Spirit Ash', dlc: true },
+  { id: 2220000, name: 'Jol\u00e1n and Anna', category: 'Spirit Ash', dlc: true },
+]
