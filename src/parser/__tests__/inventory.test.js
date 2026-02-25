@@ -112,7 +112,7 @@ describe('Inventory Parser', () => {
       expect(result.size).toBe(2)
     })
 
-    it('should skip IDs above 100,000,000', () => {
+    it('should strip type prefixes from item IDs', () => {
       const slotData = new Uint8Array(200_000)
 
       const anchorOffset = 50_000
@@ -122,18 +122,52 @@ describe('Inventory Parser', () => {
 
       const inventoryStart = anchorOffset + 8
 
-      // Entry 0: valid ID
+      // Entry 0: weapon (no prefix) — Dagger = 1,000,000
       writeUint32LE(slotData, inventoryStart, 1_000_000)
       writeUint32LE(slotData, inventoryStart + 4, 1)
 
-      // Entry 1: absurdly large ID
-      writeUint32LE(slotData, inventoryStart + 8, 200_000_000)
+      // Entry 1: armor (0x10000000 prefix) — param ID 40000
+      writeUint32LE(slotData, inventoryStart + 8, 0x10000000 + 40_000)
+      writeUint32LE(slotData, inventoryStart + 12, 1)
+
+      // Entry 2: talisman (0x20000000 prefix) — param ID 1000
+      writeUint32LE(slotData, inventoryStart + 16, 0x20000000 + 1_000)
+      writeUint32LE(slotData, inventoryStart + 20, 1)
+
+      // Entry 3: goods (0x40000000 prefix) — spirit ash param ID 200000
+      writeUint32LE(slotData, inventoryStart + 24, 0x40000000 + 200_000)
+      writeUint32LE(slotData, inventoryStart + 28, 1)
+
+      const result = findInventoryInSlot(slotData)
+      expect(result).toBeInstanceOf(Set)
+      expect(result.size).toBe(4)
+      expect(result.has(1_000_000)).toBe(true)   // weapon param ID
+      expect(result.has(40_000)).toBe(true)       // armor param ID (prefix stripped)
+      expect(result.has(1_000)).toBe(true)         // talisman param ID (prefix stripped)
+      expect(result.has(200_000)).toBe(true)       // goods param ID (prefix stripped)
+    })
+
+    it('should skip IDs with unrecognized prefixes', () => {
+      const slotData = new Uint8Array(200_000)
+
+      const anchorOffset = 50_000
+      for (let i = 0; i < STANDARD_ANCHOR.length; i++) {
+        slotData[anchorOffset + i] = STANDARD_ANCHOR[i]
+      }
+
+      const inventoryStart = anchorOffset + 8
+
+      // Entry 0: valid weapon
+      writeUint32LE(slotData, inventoryStart, 1_000_000)
+      writeUint32LE(slotData, inventoryStart + 4, 1)
+
+      // Entry 1: unrecognized prefix 0x80000000
+      writeUint32LE(slotData, inventoryStart + 8, 0x80000000 + 100)
       writeUint32LE(slotData, inventoryStart + 12, 1)
 
       const result = findInventoryInSlot(slotData)
       expect(result).toBeInstanceOf(Set)
       expect(result.has(1_000_000)).toBe(true)
-      expect(result.has(200_000_000)).toBe(false)
       expect(result.size).toBe(1)
     })
   })
@@ -172,10 +206,10 @@ describe('Inventory Parser', () => {
       expect(hasWeaponRangeId).toBe(true)
     })
 
-    it('should not contain absurdly large IDs (> 100M)', () => {
-      for (const id of inventory) {
-        expect(id).toBeLessThanOrEqual(100_000_000)
-      }
+    it('should contain armor-range IDs (protector param IDs < 10M)', () => {
+      // Roran should have armor equipped — param IDs are in the low range
+      const armorIds = [...inventory].filter(id => id >= 10_000 && id < 1_000_000)
+      expect(armorIds.length).toBeGreaterThan(0)
     })
 
     it('should have a reasonable number of items (10–2048)', () => {

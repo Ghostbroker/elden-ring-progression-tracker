@@ -62,16 +62,38 @@ function readUint32LE(data, offset) {
   )
 }
 
+// Item type prefixes used in save file inventory entries.
+// The save stores: prefix | param_id. We strip the prefix to get the raw param ID.
+const TYPE_WEAPON     = 0x00000000
+const TYPE_PROTECTOR  = 0x10000000
+const TYPE_ACCESSORY  = 0x20000000
+const TYPE_GOODS      = 0x40000000
+const TYPE_MASK       = 0x0FFFFFFF
+
+const KNOWN_PREFIXES = [TYPE_WEAPON, TYPE_PROTECTOR, TYPE_ACCESSORY, TYPE_GOODS]
+
+/**
+ * Strip the item type prefix from a save-file inventory ID.
+ * Returns the raw param ID, or -1 if the prefix is unrecognized.
+ */
+function stripTypePrefix(fullId) {
+  const prefix = fullId & ~TYPE_MASK  // top bits
+  if (!KNOWN_PREFIXES.includes(prefix)) return -1
+  return fullId & TYPE_MASK
+}
+
 /**
  * Parse inventory entries starting at a given offset.
  *
  * Each entry is 8 bytes: [item_id uint32 LE] [quantity/flags uint32 LE].
  * Entries with item_id = 0 are empty slots and are skipped.
+ * The item_id includes a type prefix (weapon/armor/accessory/goods) which
+ * is stripped to return raw param IDs matching our data files.
  * Parsing stops after MAX_ENTRIES or when the data runs out.
  *
  * @param {Uint8Array} slotData
  * @param {number} inventoryStart - byte offset where entries begin
- * @returns {Set<number>} Set of item IDs found
+ * @returns {Set<number>} Set of item IDs found (raw param IDs, prefix stripped)
  */
 function parseEntries(slotData, inventoryStart) {
   const ids = new Set()
@@ -80,15 +102,16 @@ function parseEntries(slotData, inventoryStart) {
     const offset = inventoryStart + i * ENTRY_SIZE
     if (offset + 4 > slotData.length) break
 
-    const id = readUint32LE(slotData, offset)
+    const fullId = readUint32LE(slotData, offset)
 
     // Skip empty slots
-    if (id === 0) continue
+    if (fullId === 0) continue
 
-    // Skip absurdly large IDs (> 100M) — these are not valid param IDs
-    if (id > 100_000_000) continue
+    // Strip the type prefix to get the raw param ID
+    const paramId = stripTypePrefix(fullId)
+    if (paramId <= 0) continue
 
-    ids.add(id)
+    ids.add(paramId)
   }
 
   return ids
