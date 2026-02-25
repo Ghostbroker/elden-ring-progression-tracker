@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import ChecklistItem from './ChecklistItem'
 
-export default function RegionGroup({ region, items, defaultOpen = false }) {
+export default function RegionGroup({ region, items, defaultOpen = false, onToggle }) {
   const [isOpen, setIsOpen] = useState(defaultOpen)
   const completed = items.filter(i => i.completed).length
   const total = items.length
@@ -27,10 +27,12 @@ export default function RegionGroup({ region, items, defaultOpen = false }) {
           {items.map((item) => (
             <ChecklistItem
               key={item.id}
+              id={item.id}
               name={item.name}
               location={item.location}
               completed={item.completed}
               wikiUrl={item.wikiUrl}
+              onToggle={onToggle}
             />
           ))}
         </div>

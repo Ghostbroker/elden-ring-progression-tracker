@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useCallback, useEffect } from 'react'
 import TabNavigation from './TabNavigation'
 import BossChecklist from './BossChecklist'
 import GraceChecklist from './GraceChecklist'
@@ -44,6 +44,53 @@ export default function Dashboard({ profile, checkFlag, checkInventory, onBack, 
   const [regionFilter, setRegionFilter] = useState('all')
   const [searchQuery, setSearchQuery] = useState('')
   const [showMobileFilters, setShowMobileFilters] = useState(false)
+
+  // Manual checks — persisted to localStorage per character
+  const storageKey = `manualChecks:${profile.name}`
+  const [manualChecks, setManualChecks] = useState(() => {
+    try {
+      const saved = localStorage.getItem(storageKey)
+      return saved ? new Set(JSON.parse(saved)) : new Set()
+    } catch { return new Set() }
+  })
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(storageKey, JSON.stringify([...manualChecks]))
+    } catch { /* ignore */ }
+  }, [manualChecks, storageKey])
+
+  // Wrapped check functions: save data OR manual check
+  const checkFlagOrManual = useCallback((id) => {
+    return checkFlag(id) || manualChecks.has('f' + id)
+  }, [checkFlag, manualChecks])
+
+  const checkInventoryOrManual = useCallback((id) => {
+    return checkInventory(id) || manualChecks.has('i' + id)
+  }, [checkInventory, manualChecks])
+
+  // Toggle handlers — only allow toggling items NOT completed by save data
+  const toggleFlag = useCallback((id) => {
+    if (checkFlag(id)) return
+    setManualChecks(prev => {
+      const next = new Set(prev)
+      const key = 'f' + id
+      if (next.has(key)) next.delete(key)
+      else next.add(key)
+      return next
+    })
+  }, [checkFlag])
+
+  const toggleInventory = useCallback((id) => {
+    if (checkInventory(id)) return
+    setManualChecks(prev => {
+      const next = new Set(prev)
+      const key = 'i' + id
+      if (next.has(key)) next.delete(key)
+      else next.add(key)
+      return next
+    })
+  }, [checkInventory])
 
   // Pre-map inventory items to include `region` from `category` (memoized)
   const mappedWeapons = useMemo(() => addRegionFromCategory(WEAPONS), [])
@@ -145,7 +192,8 @@ export default function Dashboard({ profile, checkFlag, checkInventory, onBack, 
           <div className="flex-1 min-w-0">
             {activeTab === 'bosses' && (
               <BossChecklist
-                checkFlag={checkFlag}
+                checkFlag={checkFlagOrManual}
+                onToggle={toggleFlag}
                 showDlc={showDlc}
                 statusFilter={statusFilter}
                 regionFilter={regionFilter}
@@ -155,7 +203,8 @@ export default function Dashboard({ profile, checkFlag, checkInventory, onBack, 
 
             {activeTab === 'graces' && (
               <GraceChecklist
-                checkFlag={checkFlag}
+                checkFlag={checkFlagOrManual}
+                onToggle={toggleFlag}
                 showDlc={showDlc}
                 statusFilter={statusFilter}
                 regionFilter={regionFilter}
@@ -167,7 +216,8 @@ export default function Dashboard({ profile, checkFlag, checkInventory, onBack, 
               <CollectibleChecklist
                 items={mappedWeapons}
                 regions={WEAPON_CATEGORIES}
-                checkFlag={checkInventory}
+                checkFlag={checkInventoryOrManual}
+                onToggle={toggleInventory}
                 label="Armament Collection"
                 showDlc={showDlc}
                 statusFilter={statusFilter}
@@ -180,7 +230,8 @@ export default function Dashboard({ profile, checkFlag, checkInventory, onBack, 
               <CollectibleChecklist
                 items={mappedArmor}
                 regions={ARMOR_CATEGORIES}
-                checkFlag={checkInventory}
+                checkFlag={checkInventoryOrManual}
+                onToggle={toggleInventory}
                 label="Armor Collection"
                 showDlc={showDlc}
                 statusFilter={statusFilter}
@@ -193,7 +244,8 @@ export default function Dashboard({ profile, checkFlag, checkInventory, onBack, 
               <CollectibleChecklist
                 items={mappedTalismans}
                 regions={TALISMAN_CATEGORIES}
-                checkFlag={checkInventory}
+                checkFlag={checkInventoryOrManual}
+                onToggle={toggleInventory}
                 label="Talisman Collection"
                 showDlc={showDlc}
                 statusFilter={statusFilter}
@@ -206,7 +258,8 @@ export default function Dashboard({ profile, checkFlag, checkInventory, onBack, 
               <CollectibleChecklist
                 items={mappedMagic}
                 regions={MAGIC_CATEGORIES}
-                checkFlag={checkInventory}
+                checkFlag={checkInventoryOrManual}
+                onToggle={toggleInventory}
                 label="Magic Collection"
                 showDlc={showDlc}
                 statusFilter={statusFilter}
@@ -219,7 +272,8 @@ export default function Dashboard({ profile, checkFlag, checkInventory, onBack, 
               <CollectibleChecklist
                 items={mappedSpiritAshes}
                 regions={null}
-                checkFlag={checkInventory}
+                checkFlag={checkInventoryOrManual}
+                onToggle={toggleInventory}
                 label="Spirit Ash Collection"
                 showDlc={showDlc}
                 statusFilter={statusFilter}
@@ -233,7 +287,8 @@ export default function Dashboard({ profile, checkFlag, checkInventory, onBack, 
               <CollectibleChecklist
                 items={mappedAshesOfWar}
                 regions={ASH_OF_WAR_CATEGORIES}
-                checkFlag={checkInventory}
+                checkFlag={checkInventoryOrManual}
+                onToggle={toggleInventory}
                 label="Ash of War Collection"
                 showDlc={showDlc}
                 statusFilter={statusFilter}
@@ -246,7 +301,8 @@ export default function Dashboard({ profile, checkFlag, checkInventory, onBack, 
               <CollectibleChecklist
                 items={COOKBOOKS}
                 regions={COLLECTIBLE_REGIONS}
-                checkFlag={checkFlag}
+                checkFlag={checkFlagOrManual}
+                onToggle={toggleFlag}
                 label="Cookbook Completion"
                 showDlc={showDlc}
                 statusFilter={statusFilter}
@@ -259,7 +315,8 @@ export default function Dashboard({ profile, checkFlag, checkInventory, onBack, 
               <CollectibleChecklist
                 items={PAINTINGS}
                 regions={COLLECTIBLE_REGIONS}
-                checkFlag={checkInventory}
+                checkFlag={checkInventoryOrManual}
+                onToggle={toggleInventory}
                 label="Painting Completion"
                 showDlc={showDlc}
                 statusFilter={statusFilter}
@@ -272,7 +329,8 @@ export default function Dashboard({ profile, checkFlag, checkInventory, onBack, 
               <CollectibleChecklist
                 items={WHETBLADES}
                 regions={null}
-                checkFlag={checkFlag}
+                checkFlag={checkFlagOrManual}
+                onToggle={toggleFlag}
                 label="Whetblade Completion"
                 showDlc={showDlc}
                 statusFilter={statusFilter}
@@ -286,7 +344,8 @@ export default function Dashboard({ profile, checkFlag, checkInventory, onBack, 
               <CollectibleChecklist
                 items={GESTURES}
                 regions={null}
-                checkFlag={checkFlag}
+                checkFlag={checkFlagOrManual}
+                onToggle={toggleFlag}
                 label="Gesture Completion"
                 showDlc={showDlc}
                 statusFilter={statusFilter}

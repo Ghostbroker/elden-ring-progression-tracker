@@ -2,7 +2,7 @@ import ProgressBar from './ProgressBar'
 import RegionGroup from './RegionGroup'
 import { BOSSES, BOSS_REGIONS } from '../data/bosses'
 
-export default function BossChecklist({ checkFlag, showDlc = true, statusFilter = 'all', regionFilter = 'all', searchQuery = '' }) {
+export default function BossChecklist({ checkFlag, onToggle, showDlc = true, statusFilter = 'all', regionFilter = 'all', searchQuery = '' }) {
   // Filter bosses based on DLC toggle
   let filteredBosses = showDlc ? BOSSES : BOSSES.filter(b => !b.dlc)
 
@@ -53,6 +53,7 @@ export default function BossChecklist({ checkFlag, showDlc = true, statusFilter 
             region={region}
             items={items}
             defaultOpen={regionFilter !== 'all'}
+            onToggle={onToggle}
           />
         ))}
       </div>

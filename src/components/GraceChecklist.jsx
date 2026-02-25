@@ -2,7 +2,7 @@ import ProgressBar from './ProgressBar'
 import RegionGroup from './RegionGroup'
 import { GRACES, GRACE_REGIONS } from '../data/graces'
 
-export default function GraceChecklist({ checkFlag, showDlc = true, statusFilter = 'all', regionFilter = 'all', searchQuery = '' }) {
+export default function GraceChecklist({ checkFlag, onToggle, showDlc = true, statusFilter = 'all', regionFilter = 'all', searchQuery = '' }) {
   let filteredGraces = showDlc ? GRACES : GRACES.filter(g => !g.dlc)
 
   // Apply search filter
@@ -50,6 +50,7 @@ export default function GraceChecklist({ checkFlag, showDlc = true, statusFilter
             region={region}
             items={items}
             defaultOpen={regionFilter !== 'all'}
+            onToggle={onToggle}
           />
         ))}
       </div>

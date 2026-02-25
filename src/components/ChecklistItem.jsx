@@ -1,7 +1,15 @@
-export default function ChecklistItem({ name, location, completed, wikiUrl }) {
+export default function ChecklistItem({ id, name, location, completed, wikiUrl, onToggle }) {
+  const handleClick = () => {
+    if (onToggle) onToggle(id)
+  }
+
   return (
-    <div className={`flex items-center gap-3 py-2 px-3 rounded transition-colors
-                     ${completed ? 'opacity-70' : 'hover:bg-bg-primary/50'}`}>
+    <div
+      onClick={handleClick}
+      className={`flex items-center gap-3 py-2 px-3 rounded transition-colors
+                  ${onToggle ? 'cursor-pointer' : ''}
+                  ${completed ? 'opacity-70' : 'hover:bg-bg-primary/50'}`}
+    >
       <span className={`text-lg ${completed ? 'text-gold' : 'text-text-muted/40'}`}>
         {completed ? '\u2713' : '\u25CB'}
       </span>

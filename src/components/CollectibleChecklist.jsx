@@ -5,6 +5,7 @@ export default function CollectibleChecklist({
   items,
   regions,
   checkFlag,
+  onToggle,
   label,
   showDlc = true,
   statusFilter = 'all',
@@ -65,6 +66,7 @@ export default function CollectibleChecklist({
               region={region}
               items={regionItems}
               defaultOpen={regionFilter !== 'all'}
+              onToggle={onToggle}
             />
           ))}
           {ungrouped.length > 0 && (
@@ -72,6 +74,7 @@ export default function CollectibleChecklist({
               region="Other"
               items={ungrouped}
               defaultOpen={regionFilter !== 'all'}
+              onToggle={onToggle}
             />
           )}
         </div>
@@ -93,6 +96,7 @@ export default function CollectibleChecklist({
           region="All"
           items={displayItems}
           defaultOpen={true}
+          onToggle={onToggle}
         />
       </div>
       {displayItems.length === 0 && (
