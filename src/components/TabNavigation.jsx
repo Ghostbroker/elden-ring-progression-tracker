@@ -1,6 +1,12 @@
 const TABS = [
   { id: 'bosses', label: 'Bosses' },
   { id: 'graces', label: 'Graces' },
+  { id: 'armaments', label: 'Armaments' },
+  { id: 'armor', label: 'Armor' },
+  { id: 'talismans', label: 'Talismans' },
+  { id: 'magic', label: 'Magic' },
+  { id: 'spiritAshes', label: 'Spirit Ashes' },
+  { id: 'ashesOfWar', label: 'Ashes of War' },
   { id: 'cookbooks', label: 'Cookbooks' },
   { id: 'paintings', label: 'Paintings' },
   { id: 'whetblades', label: 'Whetblades' },

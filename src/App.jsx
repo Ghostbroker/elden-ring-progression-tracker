@@ -5,6 +5,7 @@ import Dashboard from './components/Dashboard'
 import { parseBND4Header, getSlotOffsets } from './parser/sl2Parser'
 import { readProfileSummary } from './parser/profileSummary'
 import { loadBstMap, checkEventFlag, findEventFlagsInSlot } from './parser/eventFlags'
+import { findInventoryInSlot } from './parser/inventory'
 import { saveToCache, loadFromCache, clearCache } from './utils/cache'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
   // Cached data restored from LocalStorage (profiles + eventFlags without raw save)
   const [cachedProfiles, setCachedProfiles] = useState(null)
   const [cachedEventFlags, setCachedEventFlags] = useState(null)
+  const [cachedInventory, setCachedInventory] = useState(null)
   const [cachedSlot, setCachedSlot] = useState(null)
 
   // Pending cached session offer (shown on FileUpload screen)
@@ -59,6 +61,21 @@ function App() {
     }
   }, [saveData, selectedSlot, bstMap, cachedEventFlags])
 
+  // Parse inventory when a slot is selected
+  const inventory = useMemo(() => {
+    if (cachedInventory) return cachedInventory
+    if (!saveData || selectedSlot === null) return null
+    try {
+      const slotOffsets = getSlotOffsets()
+      const slot = slotOffsets[selectedSlot]
+      const slotData = new Uint8Array(saveData, slot.data, slot.size)
+      return findInventoryInSlot(slotData)
+    } catch (e) {
+      setError(e.message)
+      return null
+    }
+  }, [saveData, selectedSlot, cachedInventory])
+
   // Save to cache whenever we have profiles + selectedSlot + eventFlags from a fresh parse
   useEffect(() => {
     if (profiles && selectedSlot !== null && eventFlags && !cachedEventFlags) {
@@ -66,20 +83,27 @@ function App() {
         profiles,
         selectedSlot,
         eventFlags,
+        inventory,
       })
     }
-  }, [profiles, selectedSlot, eventFlags, cachedEventFlags])
+  }, [profiles, selectedSlot, eventFlags, inventory, cachedEventFlags])
 
   const checkFlag = useCallback((flagId) => {
     if (!eventFlags) return false
     return checkEventFlag(eventFlags, flagId, bstMap) === true
   }, [eventFlags, bstMap])
 
+  const checkInventory = useCallback((itemId) => {
+    if (!inventory) return false
+    return inventory.has(itemId)
+  }, [inventory])
+
   const handleFileLoaded = (buffer) => {
     setError(null)
     setSelectedSlot(null)
     setCachedProfiles(null)
     setCachedEventFlags(null)
+    setCachedInventory(null)
     setCachedSlot(null)
     setPendingCache(null)
     setSaveData(buffer)
@@ -91,6 +115,7 @@ function App() {
     setSelectedSlot(null)
     setCachedProfiles(null)
     setCachedEventFlags(null)
+    setCachedInventory(null)
     setCachedSlot(null)
     setPendingCache(null)
     setError(null)
@@ -100,6 +125,7 @@ function App() {
     if (!pendingCache) return
     setCachedProfiles(pendingCache.profiles)
     setCachedEventFlags(pendingCache.eventFlags)
+    setCachedInventory(pendingCache.inventory)
     setCachedSlot(pendingCache.selectedSlot)
     setSelectedSlot(pendingCache.selectedSlot)
     setPendingCache(null)
@@ -112,15 +138,17 @@ function App() {
 
   const handleBack = () => {
     // When going back to slot selector from dashboard, clear cached event flags
-    // so a fresh parse happens when a new slot is chosen
+    // and inventory so a fresh parse happens when a new slot is chosen
     setCachedEventFlags(null)
+    setCachedInventory(null)
     setCachedSlot(null)
     setSelectedSlot(null)
   }
 
   const handleSelectSlot = (slotIndex) => {
-    // Clear any cached event flags so fresh parse runs for the new slot
+    // Clear any cached event flags and inventory so fresh parse runs for the new slot
     setCachedEventFlags(null)
+    setCachedInventory(null)
     setCachedSlot(null)
     setSelectedSlot(slotIndex)
   }
@@ -192,6 +220,7 @@ function App() {
         <Dashboard
           profile={profiles[selectedSlot]}
           checkFlag={checkFlag}
+          checkInventory={checkInventory}
           onBack={handleBack}
           onNewFile={handleNewFile}
         />

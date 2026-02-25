@@ -7,6 +7,7 @@ export function saveToCache(data) {
       profiles: data.profiles,
       selectedSlot: data.selectedSlot,
       eventFlagsBase64,
+      inventory: data.inventory ? [...data.inventory] : null,
       timestamp: Date.now(),
     }
     localStorage.setItem(CACHE_KEY, JSON.stringify(cacheData))
@@ -25,6 +26,7 @@ export function loadFromCache() {
       profiles: data.profiles,
       selectedSlot: data.selectedSlot,
       eventFlags: base64ToUint8Array(data.eventFlagsBase64),
+      inventory: data.inventory ? new Set(data.inventory) : null,
       timestamp: data.timestamp,
     }
   } catch (e) {

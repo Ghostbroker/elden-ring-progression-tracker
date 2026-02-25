@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import TabNavigation from './TabNavigation'
 import BossChecklist from './BossChecklist'
 import GraceChecklist from './GraceChecklist'
@@ -7,22 +7,50 @@ import FilterSidebar from './FilterSidebar'
 import { BOSS_REGIONS } from '../data/bosses'
 import { GRACE_REGIONS } from '../data/graces'
 import { COOKBOOKS, PAINTINGS, WHETBLADES, GESTURES, COLLECTIBLE_REGIONS } from '../data/collectibles'
+import { WEAPONS, WEAPON_CATEGORIES } from '../data/weapons'
+import { ARMOR, ARMOR_CATEGORIES } from '../data/armor'
+import { TALISMANS, TALISMAN_CATEGORIES } from '../data/talismans'
+import { MAGIC, MAGIC_CATEGORIES } from '../data/magic'
+import { SPIRIT_ASHES, SPIRIT_ASH_CATEGORIES } from '../data/spiritAshes'
+import { ASHES_OF_WAR, ASH_OF_WAR_CATEGORIES } from '../data/ashesOfWar'
 
 const TAB_REGIONS = {
   bosses: BOSS_REGIONS,
   graces: GRACE_REGIONS,
   cookbooks: COLLECTIBLE_REGIONS,
+  armaments: WEAPON_CATEGORIES,
+  armor: ARMOR_CATEGORIES,
+  talismans: TALISMAN_CATEGORIES,
+  magic: MAGIC_CATEGORIES,
+  spiritAshes: SPIRIT_ASH_CATEGORIES,
+  ashesOfWar: ASH_OF_WAR_CATEGORIES,
 }
 
 // Tabs that support region filtering
-const REGION_TABS = new Set(['bosses', 'graces', 'cookbooks'])
+const REGION_TABS = new Set([
+  'bosses', 'graces', 'cookbooks',
+  'armaments', 'armor', 'talismans', 'magic', 'spiritAshes', 'ashesOfWar',
+])
 
-export default function Dashboard({ profile, checkFlag, onBack, onNewFile }) {
+// Map items that use `category` to include `region` for CollectibleChecklist compatibility
+function addRegionFromCategory(items) {
+  return items.map(item => ({ ...item, region: item.category }))
+}
+
+export default function Dashboard({ profile, checkFlag, checkInventory, onBack, onNewFile }) {
   const [activeTab, setActiveTab] = useState('bosses')
   const [showDlc, setShowDlc] = useState(true)
   const [statusFilter, setStatusFilter] = useState('all')
   const [regionFilter, setRegionFilter] = useState('all')
   const [showMobileFilters, setShowMobileFilters] = useState(false)
+
+  // Pre-map inventory items to include `region` from `category` (memoized)
+  const mappedWeapons = useMemo(() => addRegionFromCategory(WEAPONS), [])
+  const mappedArmor = useMemo(() => addRegionFromCategory(ARMOR), [])
+  const mappedTalismans = useMemo(() => addRegionFromCategory(TALISMANS), [])
+  const mappedMagic = useMemo(() => addRegionFromCategory(MAGIC), [])
+  const mappedSpiritAshes = useMemo(() => addRegionFromCategory(SPIRIT_ASHES), [])
+  const mappedAshesOfWar = useMemo(() => addRegionFromCategory(ASHES_OF_WAR), [])
 
   // Reset filters when switching tabs
   const handleTabChange = (tab) => {
@@ -129,6 +157,79 @@ export default function Dashboard({ profile, checkFlag, onBack, onNewFile }) {
               />
             )}
 
+            {activeTab === 'armaments' && (
+              <CollectibleChecklist
+                items={mappedWeapons}
+                regions={WEAPON_CATEGORIES}
+                checkFlag={checkInventory}
+                label="Armament Collection"
+                showDlc={showDlc}
+                statusFilter={statusFilter}
+                regionFilter={regionFilter}
+              />
+            )}
+
+            {activeTab === 'armor' && (
+              <CollectibleChecklist
+                items={mappedArmor}
+                regions={ARMOR_CATEGORIES}
+                checkFlag={checkInventory}
+                label="Armor Collection"
+                showDlc={showDlc}
+                statusFilter={statusFilter}
+                regionFilter={regionFilter}
+              />
+            )}
+
+            {activeTab === 'talismans' && (
+              <CollectibleChecklist
+                items={mappedTalismans}
+                regions={TALISMAN_CATEGORIES}
+                checkFlag={checkInventory}
+                label="Talisman Collection"
+                showDlc={showDlc}
+                statusFilter={statusFilter}
+                regionFilter={regionFilter}
+              />
+            )}
+
+            {activeTab === 'magic' && (
+              <CollectibleChecklist
+                items={mappedMagic}
+                regions={MAGIC_CATEGORIES}
+                checkFlag={checkInventory}
+                label="Magic Collection"
+                showDlc={showDlc}
+                statusFilter={statusFilter}
+                regionFilter={regionFilter}
+              />
+            )}
+
+            {activeTab === 'spiritAshes' && (
+              <CollectibleChecklist
+                items={mappedSpiritAshes}
+                regions={null}
+                checkFlag={checkInventory}
+                label="Spirit Ash Collection"
+                showDlc={showDlc}
+                statusFilter={statusFilter}
+                regionFilter={regionFilter}
+                useRegionGrouping={false}
+              />
+            )}
+
+            {activeTab === 'ashesOfWar' && (
+              <CollectibleChecklist
+                items={mappedAshesOfWar}
+                regions={ASH_OF_WAR_CATEGORIES}
+                checkFlag={checkInventory}
+                label="Ash of War Collection"
+                showDlc={showDlc}
+                statusFilter={statusFilter}
+                regionFilter={regionFilter}
+              />
+            )}
+
             {activeTab === 'cookbooks' && (
               <CollectibleChecklist
                 items={COOKBOOKS}
@@ -145,7 +246,7 @@ export default function Dashboard({ profile, checkFlag, onBack, onNewFile }) {
               <CollectibleChecklist
                 items={PAINTINGS}
                 regions={COLLECTIBLE_REGIONS}
-                checkFlag={checkFlag}
+                checkFlag={checkInventory}
                 label="Painting Completion"
                 showDlc={showDlc}
                 statusFilter={statusFilter}
