@@ -181,14 +181,19 @@ export function findEventFlagsInSlot(slotData, bstMap) {
 
   // Step 3c: The 8 bytes after the terminator must contain non-zero data.
   // After event_flags_terminator, the struct continues with field_area_data
-  // and other sections that always contain non-zero values.
-  candidates = candidates.filter(base => {
+  // and other sections that usually contain non-zero values. Some saves
+  // (e.g. certain patch versions) may have zeroed post-terminator data,
+  // so this filter is only applied when it doesn't eliminate all candidates.
+  const postTermFiltered = candidates.filter(base => {
     const postTerm = base + EVENT_FLAGS_SIZE + 1
     for (let i = 0; i < 8; i++) {
       if (postTerm + i < slotData.length && slotData[postTerm + i] !== 0) return true
     }
     return false
   })
+  if (postTermFiltered.length > 0) {
+    candidates = postTermFiltered
+  }
 
   if (candidates.length === 0) {
     throw new Error(
