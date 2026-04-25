@@ -32,6 +32,7 @@ export default function RegionGroup({ region, items, defaultOpen = false, onTogg
               location={item.location}
               completed={item.completed}
               wikiUrl={item.wikiUrl}
+              mapUrl={item.mapUrl}
               onToggle={onToggle}
             />
           ))}

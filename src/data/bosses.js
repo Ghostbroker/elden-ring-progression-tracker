@@ -50,6 +50,7 @@ export const BOSSES = [
     type: "remembrance",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Godrick+the+Grafted",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1128&code=mapA",
   },
   {
     id: 10000850,
@@ -59,6 +60,7 @@ export const BOSSES = [
     type: "great",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Margit+the+Fell+Omen",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1885&lat=-182.695312&lng=90.972955&code=mapA",
   },
 
   // ============================================================
@@ -72,6 +74,7 @@ export const BOSSES = [
     type: "boss",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Grafted+Scion",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1223&lat=-179.75&lng=77.728208&code=mapA",
   },
 
   // ============================================================
@@ -85,6 +88,7 @@ export const BOSSES = [
     type: "remembrance",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Morgott+the+Omen+King",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3232&code=mapA",
   },
   {
     id: 11000850,
@@ -94,6 +98,7 @@ export const BOSSES = [
     type: "boss",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Godfrey+First+Elden+Lord+(Golden+Shade)",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6667&code=mapA",
   },
 
   // ============================================================
@@ -107,6 +112,7 @@ export const BOSSES = [
     type: "remembrance",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Hoarah+Loux",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6059&lat=-106&lng=118&code=mapC",
   },
   {
     id: 11050850,
@@ -129,6 +135,7 @@ export const BOSSES = [
     type: "boss",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Dragonkin+Soldier+of+Nokstella",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1405&lat=-123.976562&lng=64.106346&code=mapB",
   },
 
   // ============================================================
@@ -142,6 +149,7 @@ export const BOSSES = [
     type: "boss",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Dragonkin+Soldier",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2994&code=mapB",
   },
 
   // ============================================================
@@ -155,6 +163,7 @@ export const BOSSES = [
     type: "boss",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Valiant+Gargoyle",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2976&code=mapB",
   },
   {
     id: 12020830,
@@ -164,6 +173,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Dragonkin+Soldier",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1308&code=mapB",
   },
   {
     id: 12020850,
@@ -173,6 +183,7 @@ export const BOSSES = [
     type: "boss",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Mimic+Tear",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1565&lat=-188.132812&lng=128.731198&code=mapB",
   },
 
   // ============================================================
@@ -186,6 +197,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Crucible+Knight+Siluria",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=5257&code=mapB",
   },
   {
     id: 12030800,
@@ -195,6 +207,7 @@ export const BOSSES = [
     type: "boss",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Fia's+Champions",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=5362&code=mapB",
   },
   {
     id: 12030850,
@@ -204,6 +217,7 @@ export const BOSSES = [
     type: "legend",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Lichdragon+Fortissax",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6425&lat=-93&lng=118&code=mapB",
   },
 
   // ============================================================
@@ -217,6 +231,7 @@ export const BOSSES = [
     type: "legend",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Astel+Naturalborn+of+the+Void",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3006&lat=-165.67187&lng=47.64713&code=mapB",
   },
 
   // ============================================================
@@ -230,6 +245,7 @@ export const BOSSES = [
     type: "remembrance",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Mohg+Lord+of+Blood",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4677&lat=-182.053125&lng=146.246868&code=mapB",
   },
 
   // ============================================================
@@ -269,6 +285,7 @@ export const BOSSES = [
     type: "remembrance",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Maliketh+the+Black+Blade",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4660&lat=-125.085937&lng=221.027742&code=mapA",
   },
   {
     id: 13000830,
@@ -278,6 +295,7 @@ export const BOSSES = [
     type: "legend",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Dragonlord+Placidusax",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=5711&lat=-125.98&lng=216.68&code=mapA",
   },
   {
     id: 13000850,
@@ -287,6 +305,7 @@ export const BOSSES = [
     type: "great",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Godskin+Duo",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3967&lat=-123.31&lng=216.53&code=mapA",
   },
 
   // ============================================================
@@ -300,6 +319,7 @@ export const BOSSES = [
     type: "remembrance",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Rennala+Queen+of+the+Full+Moon",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=793&code=mapA",
   },
   {
     id: 14000850,
@@ -309,6 +329,7 @@ export const BOSSES = [
     type: "great",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Red+Wolf+of+Radagon",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6502&lat=-138&lng=57&code=mapA",
   },
 
   // ============================================================
@@ -322,6 +343,7 @@ export const BOSSES = [
     type: "remembrance",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Malenia+Blade+of+Miquella",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4457&lat=-37.1&lng=149.13&code=mapA",
   },
   {
     id: 15000850,
@@ -331,6 +353,7 @@ export const BOSSES = [
     type: "great",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Loretta+Knight+of+the+Haligtree",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4624&lat=-44.523437&lng=150.263866&code=mapA",
   },
 
   // ============================================================
@@ -344,6 +367,7 @@ export const BOSSES = [
     type: "remembrance",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Rykard+Lord+of+Blasphemy",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4104&code=mapA",
   },
   {
     id: 16000850,
@@ -353,6 +377,7 @@ export const BOSSES = [
     type: "great",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Godskin+Noble",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4136&lat=-85.88&lng=63.28&code=mapA",
   },
   {
     id: 16000860,
@@ -362,6 +387,7 @@ export const BOSSES = [
     type: "boss",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Abductor+Virgins",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3564&code=mapA",
   },
 
   // ============================================================
@@ -375,6 +401,7 @@ export const BOSSES = [
     type: "boss",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Ulcerated+Tree+Spirit",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3841&lat=-196.210937&lng=100.617936&code=mapA",
   },
   {
     id: 18000850,
@@ -384,6 +411,7 @@ export const BOSSES = [
     type: "boss",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Soldier+of+Godrick",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=356&code=mapA",
   },
 
   // ============================================================
@@ -397,6 +425,7 @@ export const BOSSES = [
     type: "remembrance",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Elden+Beast",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=7661&code=mapC",
   },
 
   // ============================================================
@@ -410,6 +439,7 @@ export const BOSSES = [
     type: "boss",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Mohg+the+Omen",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6263&lat=-101.40625&lng=116.520091&code=mapA",
   },
   {
     id: 35000850,
@@ -419,6 +449,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Esgar+Priest+of+Blood",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6695&code=mapA",
   },
 
   // ============================================================
@@ -432,6 +463,7 @@ export const BOSSES = [
     type: "great",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Magma+Wyrm+Makar",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1751&code=mapA",
   },
 
   // ============================================================
@@ -445,6 +477,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Cemetery+Shade",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1204&lat=-209.53&lng=104.06&code=mapA",
   },
   {
     id: 30010800,
@@ -454,6 +487,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Erdtree+Burial+Watchdog",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+map?id=1205&lat=-207.92&lng=119.67&code=mapA",
   },
   {
     id: 30020800,
@@ -463,6 +497,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Erdtree+Burial+Watchdog",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+map?id=784&lat=-187.492187&lng=95.713618&code=mapA",
   },
   {
     id: 30110800,
@@ -472,6 +507,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Black+Knife+Assassin",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=851&lat=-174.765625&lng=106.054327&code=mapA",
   },
   {
     id: 30040800,
@@ -481,6 +517,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Grave+Warden+Duelist",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1213&code=mapA",
   },
 
   // ============================================================
@@ -494,6 +531,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Cemetery+Shade",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6511&lat=-116.3125&lng=82.415752&code=mapA",
   },
   {
     id: 30050850,
@@ -503,6 +541,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Black+Knife+Assassin",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4490&lat=-116.93&lng=81.58&code=mapA",
   },
   {
     id: 30030800,
@@ -512,6 +551,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Spirit-Caller+Snail",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1347&code=mapA",
   },
   {
     id: 30060800,
@@ -521,6 +561,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Erdtree+Burial+Watchdog",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+map?id=2949&lat=-161.176562&lng=84.627475&code=mapA",
   },
 
   // ============================================================
@@ -534,6 +575,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Ancient+Hero+of+Zamor",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=7701&lat=-94.393749&lng=90.041512&code=mapA",
   },
   {
     id: 30100800,
@@ -543,6 +585,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Crucible+Knight+Ordovis",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2703&lat=-95.914062&lng=120.457908&code=mapA",
   },
   {
     id: 30070800,
@@ -552,6 +595,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Erdtree+Burial+Watchdog",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+map?id=2950&lat=-91.657813&lng=73.049536&code=mapA",
   },
   {
     id: 30130800,
@@ -561,6 +605,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Grave+Warden+Duelist",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6260&lat=-95.140625&lng=121.863431&code=mapA",
   },
 
   // ============================================================
@@ -574,6 +619,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Red+Wolf+of+the+Champion",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6512&code=mapA",
   },
   {
     id: 30120800,
@@ -596,6 +642,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Erdtree+Burial+Watchdog",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+map?id=2942&lat=-164.80625&lng=129.943308&code=mapA",
   },
   {
     id: 30150800,
@@ -605,6 +652,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Cemetery+Shade",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6442&lat=-191&lng=140&code=mapA",
   },
   {
     id: 30160800,
@@ -614,6 +662,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Putrid+Tree+Spirit",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6255&lat=-166.66&lng=163.44&code=mapA",
   },
 
   // ============================================================
@@ -627,6 +676,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Ancient+Hero+of+Zamor",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+map?id=3872&lat=-85.50625&lng=147.799587&code=mapA",
   },
   {
     id: 30180800,
@@ -636,6 +686,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Ulcerated+Tree+Spirit",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6259&lat=-84.234375&lng=150.805845&code=mapA",
   },
   {
     id: 30190800,
@@ -645,6 +696,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Putrid+Grave+Warden+Duelist",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3505&lat=-79.16&lng=149.34&code=mapA",
   },
   {
     id: 30202800,
@@ -654,6 +706,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Stray+Mimic+Tear",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2968&lat=-84.796875&lng=142.571838&code=mapA",
   },
 
   // ============================================================
@@ -667,6 +720,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Patches",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1222&code=mapA",
   },
   {
     id: 31010800,
@@ -676,6 +730,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Runebear",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=503&code=mapA",
   },
   {
     id: 31020800,
@@ -685,6 +740,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Miranda+the+Blighted+Bloom",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3510&lat=-213.3375&lng=99.05093&code=mapA",
   },
   {
     id: 31030800,
@@ -694,6 +750,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Beastman+of+Farum+Azula",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=368&code=mapA",
   },
   {
     id: 31150800,
@@ -703,6 +760,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Demi-Human+Chief",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=371&code=mapA",
   },
   {
     id: 31170800,
@@ -712,6 +770,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Guardian+Golem",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3017&lat=-172.50&lng=109.09&code=mapA",
   },
 
   // ============================================================
@@ -725,6 +784,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Cleanrot+Knight",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1412&code=mapA",
   },
   {
     id: 31050800,
@@ -734,6 +794,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Bloodhound+Knight",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4271&lat=-162.75&lng=65.52&code=mapA",
   },
   {
     id: 31060800,
@@ -743,6 +804,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Crystalians",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=946&code=mapA",
   },
 
   // ============================================================
@@ -756,6 +818,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Kindred+of+Rot",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3571&code=mapA",
   },
   {
     id: 31090800,
@@ -765,6 +828,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Demi-Human+Queen+Margot",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3166&code=mapA",
   },
 
   // ============================================================
@@ -787,6 +851,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Black+Knife+Assassin",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4488&lat=-96.578&lng=71.60&code=mapA",
   },
   {
     id: 31190850,
@@ -796,6 +861,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Necromancer+Garris",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4486&lat=-95.22&lng=72.13&code=mapA",
   },
 
   // ============================================================
@@ -809,6 +875,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Frenzied+Duelist",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4252&lat=-180.340625&lng=129.832385&code=mapA",
   },
   {
     id: 31100800,
@@ -818,6 +885,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Beastman+of+Farum+Azula",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+map?id=2965&lat=-165.420313&lng=157.018319&code=mapA",
   },
   {
     id: 31200800,
@@ -827,6 +895,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Cleanrot+Knight",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=5434&lat=-175.164062&lng=141.89495&code=mapA",
   },
   {
     id: 31110800,
@@ -849,6 +918,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Misbegotten+Crusader",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4824&lat=-69.26997&lng=148.35371&code=mapA",
   },
   {
     id: 31220800,
@@ -858,6 +928,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Spirit-Caller+Snail",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3565&lat=-67.48125&lng=169.0979&code=mapA",
   },
 
   // ============================================================
@@ -884,6 +955,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Stonedigger+Troll",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=496&code=mapA",
   },
 
   // ============================================================
@@ -897,6 +969,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Crystalian",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1762&code=mapA",
   },
 
   // ============================================================
@@ -910,6 +983,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Stonedigger+Troll",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1224&lat=-90.978125&lng=77.651377&code=mapA",
   },
   {
     id: 32050800,
@@ -919,6 +993,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Crystalians",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+map?id=5800&lat=-91.9375&lng=93.42725&code=mapA",
   },
 
   // ============================================================
@@ -932,6 +1007,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Magma+Wyrm",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2911&lat=-174.54&lng=127.21&code=mapA",
   },
   {
     id: 32080800,
@@ -941,6 +1017,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Fallingstar+Beast",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2957&lat=-171.634375&lng=145.286559&code=mapA",
   },
 
   // ============================================================
@@ -954,6 +1031,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Astel+Stars+of+Darkness",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4492&lat=-77.93&lng=132.19&code=mapA",
   },
 
   // ============================================================
@@ -967,6 +1045,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Onyx+Lord",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2858&lat=-105.75&lng=105.660584&code=mapA",
   },
   {
     id: 34130800,
@@ -976,6 +1055,7 @@ export const BOSSES = [
     type: "boss",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Godskin+Apostle",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+map?id=3152&lat=-163.776562&lng=145.7371&code=mapA",
   },
   {
     id: 34140850,
@@ -985,6 +1065,7 @@ export const BOSSES = [
     type: "boss",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Fell+Twins",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1453&lat=-102.171875&lng=127.039843&code=mapA",
   },
 
   // ============================================================
@@ -998,6 +1079,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Mad+Pumpkin+Head",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=706&code=mapA",
   },
   {
     id: 1043370800,
@@ -1007,6 +1089,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Night's+Cavalry",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=825&code=mapA",
   },
   {
     id: 1042380800,
@@ -1019,12 +1102,13 @@ export const BOSSES = [
   },
   {
     id: 1042380850,
-    name: "Ball Bearing Hunter",
+    name: "Bell Bearing Hunter",
     location: "Warmaster's Shack",
     region: "Limgrave",
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Bell+Bearing+Hunter",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1753&lat=-179.384375&lng=102.020124&code=mapA",
   },
   {
     id: 1044350800,
@@ -1034,6 +1118,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Bloodhound+Knight+Darriwil",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1756&code=mapA",
   },
   {
     id: 1042370800,
@@ -1043,6 +1128,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Crucible+Knight",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1754&code=mapA",
   },
   {
     id: 1042360800,
@@ -1052,6 +1138,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Tree+Sentinel",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2051&code=mapA",
   },
   {
     id: 1043360800,
@@ -1061,6 +1148,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Flying+Dragon+Agheel",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=8&code=mapA",
   },
   {
     id: 1045390800,
@@ -1070,6 +1158,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Tibia+Mariner",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=973&code=mapA",
   },
 
   // ============================================================
@@ -1083,6 +1172,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Ancient+Hero+of+Zamor",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+map?id=829&lat=-211.21875&lng=98.180473&code=mapA",
   },
   {
     id: 1043330800,
@@ -1092,6 +1182,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Erdtree+Avatar",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=712&code=mapA",
   },
   {
     id: 1044320850,
@@ -1101,6 +1192,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Night's+Cavalry",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=722&lat=-216.265625&lng=115.430593&code=mapA",
   },
   {
     id: 1044320800,
@@ -1119,6 +1211,7 @@ export const BOSSES = [
     type: "boss",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Leonine+Misbegotten",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=746&code=mapA",
   },
 
   // ============================================================
@@ -1132,6 +1225,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Royal+Revenant",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2061&code=mapA",
   },
   {
     id: 1038410800,
@@ -1141,6 +1235,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Adan+Thief+of+Fire",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1462&code=mapA",
   },
   {
     id: 1033450800,
@@ -1150,6 +1245,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Bols+Carian+Knight",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1894&code=mapA",
   },
   {
     id: 1036500800,
@@ -1159,6 +1255,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Onyx+Lord",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1875&lat=-106.46875&lng=66.208511&code=mapA",
   },
   {
     id: 1033420800,
@@ -1168,6 +1265,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Alecto+Black+Knife+Ringleader",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=5934&code=mapA",
   },
   {
     id: 1033430800,
@@ -1177,6 +1275,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Erdtree+Avatar",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1053&code=mapA",
   },
   {
     id: 1038480800,
@@ -1186,6 +1285,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Erdtree+Avatar",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2112&code=mapA",
   },
   {
     id: 1035500800,
@@ -1195,15 +1295,17 @@ export const BOSSES = [
     type: "great",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Royal+Knight+Loretta",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1540&code=mapA",
   },
   {
     id: 1037460800,
-    name: "Ball Bearing Hunter",
+    name: "Bell Bearing Hunter",
     location: "Church of Vows",
     region: "Liurnia of the Lakes",
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Bell+Bearing+Hunter",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+map?id=4752&lat=-130.793749&lng=68.49658&code=mapA",
   },
   {
     id: 1039430800,
@@ -1213,6 +1315,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Night's+Cavalry",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4481&lat=-119.25&lng=64.36&code=mapA",
   },
   {
     id: 1036480800,
@@ -1222,6 +1325,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Night's+Cavalry",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+map?id=3182&lat=-150.665625&lng=78.921082&code=mapA",
   },
   {
     id: 1037420800,
@@ -1231,6 +1335,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Death+Rite+Bird",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6131&lat=-137.359&lng=62.312&code=mapA",
   },
   {
     id: 1036450800,
@@ -1249,6 +1354,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Glintstone+Dragon+Smarag",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1879&lat=-137.94&code=mapA",
   },
   {
     id: 1034420800,
@@ -1267,6 +1373,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Omenkiller",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1060&code=mapA",
   },
   {
     id: 1039440800,
@@ -1276,6 +1383,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Tibia+Mariner",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1359&code=mapA",
   },
 
   // ============================================================
@@ -1289,6 +1397,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Ancient+Dragon+Lansseax",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2136&lat=-100.5625&code=mapA",
   },
   {
     id: 1041520800,
@@ -1298,6 +1407,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Ancient+Dragon+Lansseax",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3025&lat=-96.7&lng=95.723&code=mapA",
   },
   {
     id: 1038510800,
@@ -1316,6 +1426,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Fallingstar+Beast",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=5797&lat=-104.57&lng=95.74&code=mapA",
   },
   {
     id: 1040530800,
@@ -1325,6 +1436,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Sanguine+Noble",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=5807&lat=-87.129687&lng=87.255912&code=mapA",
   },
   {
     id: 1041510800,
@@ -1334,6 +1446,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Tree+Sentinel",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1136&code=mapA",
   },
   {
     id: 1042550800,
@@ -1343,6 +1456,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Godskin+Apostle",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+map?id=5805&lat=-76.5625&lng=100.1641&code=mapA",
   },
   {
     id: 1040520800,
@@ -1352,6 +1466,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Black+Knife+Assassin",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3030&lat=-94.63&lng=90.59&code=mapA",
   },
   {
     id: 1045520800,
@@ -1361,6 +1476,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Draconic+Tree+Sentinel",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1151&lat=-93.609375&lng=120.199825&code=mapA",
   },
   {
     id: 1039500800,
@@ -1370,6 +1486,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Godefroy+the+Grafted",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3353&code=mapA",
   },
   {
     id: 1041530800,
@@ -1379,6 +1496,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Wormface",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=5802&code=mapA",
   },
   {
     id: 1044530800,
@@ -1391,12 +1509,13 @@ export const BOSSES = [
   },
   {
     id: 1043530800,
-    name: "Ball Bearing Hunter",
+    name: "Bell Bearing Hunter",
     location: "Hermit Merchant's Shack",
     region: "Altus Plateau",
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Bell+Bearing+Hunter",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=5424&lat=-89.07&lng=107.313&code=mapA",
   },
   {
     id: 1039540800,
@@ -1415,6 +1534,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Tibia+Mariner",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2004&code=mapA",
   },
   {
     id: 1039510800,
@@ -1424,6 +1544,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Night's+Cavalry",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+map?id=5793&lat=-102.375&lng=81.857565&code=mapA",
   },
 
   // ============================================================
@@ -1446,6 +1567,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Magma+Wyrm",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6105&lat=-89.996&lng=57.927&code=mapA",
   },
   {
     id: 1036540800,
@@ -1464,6 +1586,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Ulcerated+Tree+Spirit",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1233&code=mapA",
   },
 
   // ============================================================
@@ -1477,6 +1600,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Erdtree+Avatar",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2927&code=mapA",
   },
   {
     id: 1048370800,
@@ -1486,6 +1610,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Decaying+Ekzykes",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1157&code=mapA",
   },
   {
     id: 1049370800,
@@ -1495,6 +1620,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Night's+Cavalry",
+    mapUrl: "https://eldenring.wiki.fextralife.com/interactive+map?id=1168&code=mapA",
   },
   {
     id: 1049370850,
@@ -1504,6 +1630,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Death+Rite+Bird",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4512&lat=-187.56&lng=147.04&code=mapA",
   },
   {
     id: 1049380800,
@@ -1513,6 +1640,7 @@ export const BOSSES = [
     type: "great",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Commander+O'Neil",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+map?id=1560&lat=-181.29687&lng=143.75635&code=mapA",
   },
   {
     id: 1051360800,
@@ -1522,6 +1650,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Crucible+Knight",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2362&code=mapA",
   },
   {
     id: 1252380800,
@@ -1531,6 +1660,7 @@ export const BOSSES = [
     type: "remembrance",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Starscourge+Radahn",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2362&code=mapA",
   },
   {
     id: 1049390800,
@@ -1540,15 +1670,17 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Nox+Swordstress+%26+Nox+Priest",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+map?id=1558&lat=-173.398437&lng=146.918723&code=mapA",
   },
   {
     id: 1048410800,
-    name: "Ball Bearing Hunter",
+    name: "Bell Bearing Hunter",
     location: "Isolated Merchant's Shack (Dragonbarrow)",
     region: "Caelid",
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Bell+Bearing+Hunter",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=5425&lat=-164.59375&lng=136.674478&code=mapA",
   },
   {
     id: 1049390850,
@@ -1558,6 +1690,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Battlemage+Hugues",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6661&code=mapA",
   },
   {
     id: 1051400800,
@@ -1567,6 +1700,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Erdtree+Avatar",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6441&lat=-166.539062&lng=155.722083&code=mapA",
   },
   {
     id: 1052410800,
@@ -1576,6 +1710,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Flying+Dragon+Greyll",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+map?id=1348&lat=-156.093&lng=160.30&code=mapA",
   },
   {
     id: 1052410850,
@@ -1585,6 +1720,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Night's+Cavalry",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6068&lat=-160.87&lng=163.51&code=mapA",
   },
   {
     id: 1051430800,
@@ -1594,6 +1730,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Black+Blade+Kindred",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1251&code=mapA",
   },
   {
     id: 1048400800,
@@ -1603,6 +1740,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Mad+Pumpkin+Head",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+map?id=3011&lat=-171.565625&lng=135.596258&code=mapA",
   },
 
   // ============================================================
@@ -1616,6 +1754,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Night's+Cavalry",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6256&lat=-99&lng=136&code=mapA",
   },
   {
     id: 1049520800,
@@ -1625,6 +1764,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Black+Blade+Kindred",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1455&code=mapA",
   },
   {
     id: 1254560800,
@@ -1634,6 +1774,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Borealis+the+Freezing+Fog",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2054&lat=-65.76875&lng=171.117321&code=mapA",
   },
   {
     id: 1053560800,
@@ -1643,6 +1784,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Roundtable+Knight+Vyke",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3873&lat=-72.171875&lng=167.967194&code=mapA",
   },
   {
     id: 1052520800,
@@ -1652,6 +1794,7 @@ export const BOSSES = [
     type: "remembrance",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Fire+Giant",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=3552&lat=-91.82&lng=164.49&code=mapA",
   },
   {
     id: 1052560800,
@@ -1661,6 +1804,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Erdtree+Avatar",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+map?id=3416&lat=-67.635938&lng=161.518327&code=mapA",
   },
   {
     id: 1050570800,
@@ -1670,6 +1814,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Death+Rite+Bird",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+map?id=3263&lat=-64.36875&lng=151.906893&code=mapA",
   },
   {
     id: 1051570800,
@@ -1679,6 +1824,7 @@ export const BOSSES = [
     type: "great",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Commander+Niall",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+map?id=3807&lat=-58.929687&lng=158.27116&code=mapA",
   },
   {
     id: 1050560800,
@@ -1688,6 +1834,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Great+Wyrm+Theodorix",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4656&lat=-68.335937&lng=149.168542&code=mapA",
   },
   {
     id: 1248550800,
@@ -1697,6 +1844,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Night's+Cavalry",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4411&lat=-76.39&lng=139&code=mapA",
   },
 
   // ============================================================
@@ -1710,6 +1858,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Erdtree+Avatar",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=4641&code=mapA",
   },
   {
     id: 1048570800,
@@ -1719,6 +1868,7 @@ export const BOSSES = [
     type: "field",
     dlc: false,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Death+Rite+Bird",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=6210&lat=-60&lng=136&code=mapA",
   },
 
   // ============================================================
@@ -1732,6 +1882,7 @@ export const BOSSES = [
     type: "field",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Ghostflame+Dragon",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=654988&code=mapD",
   },
   {
     id: 2046410800,
@@ -1741,6 +1892,7 @@ export const BOSSES = [
     type: "boss",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Blackgaol+Knight",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=654886&code=mapD",
   },
   {
     id: 20000800,
@@ -1750,6 +1902,7 @@ export const BOSSES = [
     type: "remembrance",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Divine+Beast+Dancing+Lion",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=654965&code=mapD",
   },
 
   // ============================================================
@@ -1763,6 +1916,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Chief+Bloodfiend",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655564&code=mapD",
   },
   {
     id: 41020800,
@@ -1772,6 +1926,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Lamenter",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655606&code=mapD",
   },
   {
     id: 41000800,
@@ -1781,6 +1936,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Demi-Human+Swordmaster+Onze",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=654976&code=mapD",
   },
 
   // ============================================================
@@ -1794,6 +1950,7 @@ export const BOSSES = [
     type: "remembrance",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Rellana+Twin+Moon+Knight",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655153&code=mapD",
   },
   {
     id: 2049430800,
@@ -1803,6 +1960,7 @@ export const BOSSES = [
     type: "field",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Ghostflame+Dragon",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655045&code=mapD",
   },
   {
     id: 2049450800,
@@ -1812,6 +1970,7 @@ export const BOSSES = [
     type: "field",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Ralva+the+Great+Red+Bear",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655013&code=mapD",
   },
   {
     id: 2049440800,
@@ -1821,6 +1980,7 @@ export const BOSSES = [
     type: "field",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Dryleaf+Dane",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655677&code=mapD",
   },
   {
     id: 2049430850,
@@ -1830,6 +1990,7 @@ export const BOSSES = [
     type: "boss",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Black+Knight+Edredd",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655055&code=mapD",
   },
   {
     id: 2047450800,
@@ -1839,6 +2000,7 @@ export const BOSSES = [
     type: "boss",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Black+Knight+Garrew",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655218&code=mapD",
   },
   {
     id: 2046450800,
@@ -1848,6 +2010,7 @@ export const BOSSES = [
     type: "boss",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Red+Bear",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655214&code=mapD",
   },
   {
     id: 2051440800,
@@ -1857,6 +2020,7 @@ export const BOSSES = [
     type: "boss",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Rakshasa",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655818&code=mapD",
   },
   {
     id: 2049480800,
@@ -1866,6 +2030,7 @@ export const BOSSES = [
     type: "remembrance",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Commander+Gaius",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655366&code=mapD",
   },
   {
     id: 2050480800,
@@ -1875,6 +2040,7 @@ export const BOSSES = [
     type: "great",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Scadutree+Avatar",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655367&code=mapD",
   },
   {
     id: 2050470800,
@@ -1884,6 +2050,7 @@ export const BOSSES = [
     type: "field",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Tree+Sentinel",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655756&code=mapD",
   },
   {
     id: 2050480860,
@@ -1902,6 +2069,7 @@ export const BOSSES = [
     type: "field",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Fallingstar+Beast",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655770&code=mapD",
   },
   {
     id: 2052430800,
@@ -1911,6 +2079,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Jori+Elder+Inquisitor",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655840&code=mapD",
   },
 
   // ============================================================
@@ -1924,6 +2093,7 @@ export const BOSSES = [
     type: "great",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Golden+Hippopotamus",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655342&code=mapD",
   },
   {
     id: 21010800,
@@ -1933,6 +2103,7 @@ export const BOSSES = [
     type: "remembrance",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Messmer+the+Impaler",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655484&code=mapD",
   },
 
   // ============================================================
@@ -1946,6 +2117,7 @@ export const BOSSES = [
     type: "field",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Rugalea+the+Great+Red+Bear",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=659179&code=mapD",
   },
   {
     id: 2046460800,
@@ -1955,6 +2127,7 @@ export const BOSSES = [
     type: "boss",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Divine+Beast+Dancing+Lion",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655754&code=mapD",
   },
   {
     id: 2044450800,
@@ -1964,6 +2137,7 @@ export const BOSSES = [
     type: "remembrance",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Romina+Saint+of+the+Bud",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655463&code=mapD",
   },
 
   // ============================================================
@@ -1977,6 +2151,7 @@ export const BOSSES = [
     type: "remembrance",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Metyr+Mother+of+Fingers",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655728&code=mapD",
   },
   {
     id: 2051450800,
@@ -1986,6 +2161,7 @@ export const BOSSES = [
     type: "boss",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Count+Ymir+Mother+of+Fingers",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655733&code=mapD",
   },
 
   // ============================================================
@@ -1999,6 +2175,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Death+Knight",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655220&code=mapD",
   },
   {
     id: 40010800,
@@ -2008,6 +2185,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Death+Knight",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655268&code=mapD",
   },
 
   // ============================================================
@@ -2021,6 +2199,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Curseblade+Labirith",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655317&code=mapD",
   },
 
   // ============================================================
@@ -2034,6 +2213,7 @@ export const BOSSES = [
     type: "field",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Ghostflame+Dragon",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655702&code=mapD",
   },
   {
     id: 2046380800,
@@ -2043,6 +2223,7 @@ export const BOSSES = [
     type: "boss",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Dancer+of+Ranah",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655311&code=mapD",
   },
   {
     id: 2047390800,
@@ -2052,6 +2233,7 @@ export const BOSSES = [
     type: "field",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Death+Rite+Bird",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655694&code=mapD",
   },
   {
     id: 2046400800,
@@ -2061,6 +2243,7 @@ export const BOSSES = [
     type: "field",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Demi-Human+Queen+Marigga",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655698&code=mapD",
   },
 
   // ============================================================
@@ -2074,6 +2257,7 @@ export const BOSSES = [
     type: "remembrance",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Putrescent+Knight",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655538&code=mapD",
   },
 
   // ============================================================
@@ -2087,6 +2271,7 @@ export const BOSSES = [
     type: "field",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Jagged+Peak+Drake",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655569&code=mapD",
   },
   {
     id: 2052400800,
@@ -2096,6 +2281,7 @@ export const BOSSES = [
     type: "field",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Jagged+Peak+Drake",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655772&code=mapD",
   },
   {
     id: 43010800,
@@ -2105,6 +2291,7 @@ export const BOSSES = [
     type: "dungeon",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Ancient+Dragon-Man",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655544&code=mapD",
   },
   {
     id: 2054390850,
@@ -2114,6 +2301,7 @@ export const BOSSES = [
     type: "field",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Ancient+Dragon+Senessax",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655843&code=mapD",
   },
   {
     id: 2054390800,
@@ -2123,6 +2311,7 @@ export const BOSSES = [
     type: "remembrance",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Bayle+the+Dread",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655842&code=mapD",
   },
 
   // ============================================================
@@ -2136,6 +2325,7 @@ export const BOSSES = [
     type: "remembrance",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Midra+Lord+of+Frenzied+Flame",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655461&code=mapD",
   },
 
   // ============================================================
@@ -2149,5 +2339,6 @@ export const BOSSES = [
     type: "remembrance",
     dlc: true,
     wikiUrl: "https://eldenring.wiki.fextralife.com/Radahn+Consort+of+Miquella",
+    mapUrl: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=655561&code=mapD",
   },
 ]

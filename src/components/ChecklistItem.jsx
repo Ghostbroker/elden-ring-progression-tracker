@@ -1,4 +1,4 @@
-export default function ChecklistItem({ id, name, location, completed, wikiUrl, onToggle }) {
+export default function ChecklistItem({ id, name, location, completed, wikiUrl, mapUrl, onToggle }) {
   const handleClick = () => {
     if (onToggle) onToggle(id)
   }
@@ -11,11 +11,12 @@ export default function ChecklistItem({ id, name, location, completed, wikiUrl, 
                   ${completed ? 'opacity-70' : 'hover:bg-bg-primary/50'}`}
     >
       <span className={`text-lg ${completed ? 'text-gold' : 'text-text-muted/40'}`}>
-        {completed ? '\u2713' : '\u25CB'}
+        {completed ? '✓' : '○'}
       </span>
       <div className="flex-1 min-w-0">
         {wikiUrl ? (
           <a href={wikiUrl} target="_blank" rel="noopener noreferrer"
+             onClick={(e) => e.stopPropagation()}
              className={`hover:underline ${completed ? 'text-text-muted' : 'text-text-primary'}`}>
             {name}
           </a>
@@ -28,6 +29,19 @@ export default function ChecklistItem({ id, name, location, completed, wikiUrl, 
           <span className="text-text-muted text-xs ml-2">{location}</span>
         )}
       </div>
+      {mapUrl && (
+        <a
+          href={mapUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(e) => e.stopPropagation()}
+          title="Map Link"
+          aria-label={`Map link for ${name}`}
+          className="text-text-muted/60 hover:text-gold transition-colors shrink-0"
+        >
+          {'\u{1F310}'}
+        </a>
+      )}
     </div>
   )
 }
